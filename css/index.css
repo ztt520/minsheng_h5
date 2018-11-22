@@ -25,7 +25,7 @@ body {
         height: 480px;*/
 	width: 100%;
 	height: 100%;
-	background: #000;
+	/* background: #000; */
 
 
 }
@@ -41,15 +41,21 @@ body {
 .swiper-slide2 {
 	width: 100%;
 	height: 100%;
-	background: url(../images/p1.jpg) no-repeat left top;
+	background: url(../images/p1.png) no-repeat left top;
 	background-size: 100% 100%;
 }
+/* .slide2_box {
+	width: 100%;
+	height: 100%;
+	background: url(../images/p1_1.png) no-repeat left top;
+	background-size: 100% 100%;
+} */
 
 .swiper-slide3 {
 	width: 100%;
 	height: 100%;
-	background: url(../images/p2.jpg) no-repeat left top;
-	background-size: 100% 102%;
+	background: url(../images/p2.png) no-repeat left top;
+	background-size: 100% 100%;
 }
 
 .swiper-slide4 {
@@ -232,12 +238,61 @@ img {
 	height: 85%;
 	transform: rotateY(0deg);
 }
-.box2 {
+.box3 {
+	width: 100%;
+	height: 85%;
+	transform: rotateY(0deg);
+}
+.box5 {
+	width: 100%;
+	height: 102%;
+	transform: rotateY(0deg);
+}
+.box7 {
+	width: 100%;
+	height: 102%;
+	transform: rotateY(0deg);
+}
+.box9 {
+	width: 100%;
+	height: 102%;
+	transform: rotateY(0deg);
+}
+.box2,.box4 {
 	width: 100%;
 	height: 15%;
 	transform: rotateY(0deg);
 	position: absolute;
 }
+/* .box4 {
+	width: 100%;
+	height: 15%;
+	transform: rotateY(0deg);
+	position: absolute;
+	z-index: 4
+}
+.box6 {
+	width: 100%;
+	height: 15%;
+	transform: rotateY(0deg);
+	position: absolute;
+	z-index: 4
+}
+.box8 {
+	width: 100%;
+	height: 15%;
+	transform: rotateY(0deg);
+	position: absolute;
+	z-index: 4
+}
+.box10 {
+	width: 100%;
+	height: 15%;
+	transform: rotateY(0deg);
+	position: absolute;
+	z-index: 4
+} */
+
 
 /* .qingxie {
 	transform: skewX(20deg);
@@ -327,7 +382,7 @@ img {
 	width: 1.06rem;
 	height: 1.8rem;
 	left: 0.64rem;
-	top: 0.38rem;
+	top: 0.33rem;
 	z-index: 9;
 	visibility: visible;
 	animation-duration: 1.5s;
@@ -399,9 +454,9 @@ img {
 
 .threeImg2 {
 	width: 3.75rem;
-	height: 45%;
-	left: 0px;
-	top: 38%;
+	height: 44.2%;
+	left: 0;
+	top: 37.6%;
 	z-index: 3;
 	visibility: hidden;
 }
