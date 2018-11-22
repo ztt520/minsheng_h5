@@ -62,10 +62,12 @@
           <div class="box1">
             <img src="./images/images/p14_03.png" class="ani resize qingxie twoImg2" swiper-animate-effect="fadeIn"
               swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+          </div>
+          <div class="box2">
             <img src="./images/images/p1111_06.png" class="ani resize qingxie2 twoImg3" swiper-animate-effect="fadeIn"
               swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
-            <img src="./images/images/2_11.png" id="array" class="resize">
           </div>
+          <img src="./images/images/2_11.png" id="array" class="resize">
         </div>
       </section>
       <!----------------slide3-------------->
@@ -266,47 +268,28 @@
       //beta:设备绕x轴旋转的角度
       //gamma:设备绕y轴旋转的角度
       var box = document.querySelector(".box")
+      var box1 = document.querySelector(".box1")
+      var box2 = document.querySelector(".box2")
       if (Math.abs(event.gamma) > 8) {
         Math.abs(event.gamma) = 8
       }
       box.style.cssText = "transform: rotateY(" + event.gamma + "deg)"
+      box1.style.cssText = "transform: rotateY(" + event.gamma + "deg)"
+      box2.style.cssText = "transform: rotateY(" + (- event.gamma) + "deg)"
+
       // box.style.cssText="transform: scale3d(1." + Math.abs(event.gamma) + ",1."+ Math.abs(event.gamma) + ",1."+
-      Math.abs(event.gamma) + ") rotateY(" + event.gamma + "deg)"
+      // Math.abs(event.gamma) + ") rotateY(" + event.gamma + "deg)"
     }
 
-    function change() {
-      var box = document.querySelector(".box")
-      // box.style.cssText="transform: rotateY("+event.gamma+"deg)"
-      box.style.cssText = "transform: scale3d(1.3,1.3,1.3) rotateY(30deg)"
-    }
-  </script>
-  <script>
-    //首先是为浏览器绑定deviceorientation事件和处理程序。
-    if (window.DeviceOrientationEvent) {
-      window.addEventListener('deviceorientation', DeviceOrientationHandler, false);
-    } else {
-      alert("您的浏览器不支持DeviceOrientation");
-    }
-
-    function DeviceOrientationHandler(event) {
-      console.log(event)
-      //alpha:设备指示的方向，根据指南针的设定情况而定
-      //beta:设备绕x轴旋转的角度
-      //gamma:设备绕y轴旋转的角度
-      var box = document.querySelector(".box1")
-      if (Math.abs(event.gamma) > 8) {
-        Math.abs(event.gamma) = 8
-      }
-      box.style.cssText = "transform: rotateY(" + event.gamma + "deg)"
-      // box.style.cssText="transform: scale3d(1." + Math.abs(event.gamma) + ",1."+ Math.abs(event.gamma) + ",1."+
-      Math.abs(event.gamma) + ") rotateY(" + event.gamma + "deg)"
-    }
-
-    function change() {
-      var box = document.querySelector(".box1")
-      // box.style.cssText="transform: rotateY("+event.gamma+"deg)"
-      box.style.cssText = "transform: scale3d(1.3,1.3,1.3) rotateY(30deg)"
-    }
+    // function change() {
+    //   var box = document.querySelector(".box")
+    //   var box1 = document.querySelector(".box1")
+    //   // box.style.cssText="transform: rotateY("+event.gamma+"deg)"
+    //   box.style.cssText = "transform: scale3d(1.3,1.3,1.3) rotateY(30deg)"
+    //   box1.style.cssText = "transform: scale3d(1.3,1.3,1.3) rotateY(30deg)"
+    //   box2.style.cssText = "transform: scale3d(1.3,1.3,1.3) rotateY(-30deg)"
+    //   alert(box2.style.cssText)
+    // }
   </script>
 
   <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
