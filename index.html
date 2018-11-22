@@ -9,288 +9,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/animate.min.css">
+  <link rel="stylesheet" href="./css/index.css">
   <script src="./js/swiper.min.js"></script>
   <script type="text/javascript" src="./js/orienter.js"></script>
   <script src="./js/swiper.animate.min.js"></script>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
 
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      font-family: "microsoft yahei";
-    }
-
-    .swiper-container {
-      /*  width: 320px;
-        height: 480px;*/
-      width: 100%;
-      height: 100%;
-      background: #000;
-
-
-    }
-
-    .swiper-slide {
-      width: 100%;
-      height: 100%;
-      background: url(images/pbg.jpg) no-repeat left top;
-      background-size: 100% 100%;
-
-    }
-
-    .swiper-slide2 {
-      width: 100%;
-      height: 100%;
-      background: url(images/p1.jpg) no-repeat left top;
-      background-size: 100% 100%;
-    }
-
-    .swiper-slide3 {
-      width: 100%;
-      height: 100%;
-      background: url(images/p2.jpg) no-repeat left top;
-      background-size: 100% 102%;
-    }
-
-    .swiper-slide4 {
-      width: 100%;
-      height: 100%;
-      background: url(images/p3.jpg) no-repeat left top;
-      background-size: 100% 100%;
-    }
-
-    .swiper-slide5 {
-      width: 100%;
-      height: 100%;
-      background: url(images/p4.jpg) no-repeat left top;
-      background-size: 100% 100%;
-    }
-
-    .swiper-slide6 {
-      width: 100%;
-      height: 100%;
-      background: url(images/p5.jpg) no-repeat left top;
-      background-size: 100% 100%;
-    }
-
-    .swiper-slide7 {
-      width: 100%;
-      height: 100%;
-      background: url(images/pbg.jpg) no-repeat left top;
-      background-size: 100% 100%;
-    }
-
-    img {
-      display: block;
-    }
-
-    .swiper-pagination-bullet {
-      width: 6px;
-      height: 6px;
-      background: #fff;
-      opacity: .4;
-    }
-
-    .swiper-pagination-bullet-active {
-      opacity: 1;
-    }
-
-    @-webkit-keyframes start {
-
-      0%,
-      30% {
-        opacity: 0;
-        -webkit-transform: translate(0, -8px);
-      }
-
-      60% {
-        opacity: 1;
-        -webkit-transform: translate(0, 0);
-      }
-
-      100% {
-        opacity: 0;
-        -webkit-transform: translate(0, 10px);
-      }
-    }
-
-    @-moz-keyframes start {
-
-      0%,
-      30% {
-        opacity: 0;
-        -webkit-transform: translate(0, -8px);
-      }
-
-      60% {
-        opacity: 1;
-        -webkit-transform: translate(0, 0);
-      }
-
-      100% {
-        opacity: 0;
-        -webkit-transform: translate(0, 10px);
-      }
-    }
-
-    @keyframes start {
-
-      0%,
-      30% {
-        opacity: 0;
-        -webkit-transform: translate(0, -8px);
-      }
-
-      60% {
-        opacity: 1;
-        -webkit-transform: translate(0, 0);
-      }
-
-      100% {
-        opacity: 0;
-        -webkit-transform: translate(0, 10px);
-      }
-    }
-
-    .ani {
-      position: absolute;
-    }
-
-    .txt {
-      position: absolute;
-    }
-
-    #array {
-      position: absolute;
-      z-index: 999;
-      -webkit-animation: start 1.5s infinite ease-in-out;
-    }
-
-    /* 音乐图标旋转动画 */
-    #music {
-
-      width: 24px;
-      height: 24px;
-      background: url("./images/images/music.png") no-repeat center;
-      background-size: 100%;
-      top: 14px;
-      position: absolute;
-      right: 20px;
-      z-index: 9;
-      display: block;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-    }
-
-    @-webkit-keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-
-      100% {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-
-    /* ===== */
-    .container {
-      /*margin-top: 100px;*/
-      width: 100%;
-      height: 100%;
-      perspective: 100px;
-      /*元素距离视图的距离*/
-      /* border: 1px solid #000; */
-    }
-
-    .box {
-      transform: rotateY(0deg);
-    }
-
-    .qingxie {
-      transform: skewX(20deg);
-      -webkit-transform: skewX(20deg);
-      /*兼容-webkit-引擎浏览器*/
-      -moz-transform: skewX(20deg);
-      /*兼容-moz-引擎浏览器*/
-    }
-
-    .qingxie2 {
-      transform: skewX(-20deg);
-      -webkit-transform: skewX(-20deg);
-      /*兼容-webkit-引擎浏览器*/
-      -moz-transform: skewX(-20deg);
-      /*兼容-moz-引擎浏览器*/
-    }
-
-    .quanyi2 {
-      display: none;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, .45);
-    }
-
-    #close {
-      width: 60px;
-      height: 60px;
-      position: absolute;
-      bottom: 147px;
-      left: 50%;
-      margin-left: -30px;
-      z-index: 9999;
-    }
-
-    .context {
-      width: 270px;
-      height: 350px;
-      position: absolute;
-      top: 140px;
-      left: 50%;
-      margin-left: -135px;
-      z-index: 9999;
-    }
-
-    .context p {
-      font-size: 13px;
-      color: #fff;
-    }
-
-    .lastPage {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 9999;
-      background: hotpink;
-    }
   </style>
 </head>
+<script>
+  window.onresize = function () {
+    var s = document.documentElement.clientWidth;
+    document.documentElement.style.fontSize = s / 3.75 + "px";
+  };
+  window.onresize();
+</script>
 
 <body>
   <!-- <p id="tip"></p> -->
@@ -305,148 +39,144 @@
       <!-------------slide1-------------- -->
       <section class=" swiper-slide swiper-slide1 swiper-slide-active" style="height: 667px; opacity: 1; transform: translate3d(0px, 0px, 0px) scaleY(1);">
         <div class="container">
-          <img src="./images/images/2_02.png" class="ani resize  zoomIn animated" style="width: 180px; height: 30px; left: 0px; top: 15px; z-index: 3; visibility: visible;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-delay:0s;-webkit-animation-delay:0s;"
-            swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s"
-            swiper-animate-style-cache="width:320px;height:43px;left:0px;top:30px;z-index:3;">
-          <!-- <img src="upload/bonus_02.jpg" class="ani resize  fadeIn animated" style="width: 320px; height: 27px; left: 0px; top: 75px; z-index: 3; visibility: visible;animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-delay:1.5s;-webkit-animation-delay:1.5s;" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s" swiper-animate-style-cache="width:320px;height:27px;left:0px;top:75px;z-index:3;">  -->
+          <img src="./images/images/2_02.png" class="ani resize  zoomIn animated oneImg4" swiper-animate-effect="zoomIn"
+            swiper-animate-duration="1.5s" swiper-animate-delay="0s" swiper-animate-style-cache="width:320px;height:43px;left:0px;top:30px;z-index:3;">
           <div class="box">
-            <img src="./images/22.png" class="ani resize  rotateInDownLeft animated" style="width: 375px; left: 0px; top: 10px; z-index: 2; visibility: visible;animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-delay:2s;-webkit-animation-delay:2s;"
-              swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2s"
-              swiper-animate-style-cache="width:320px;height:188px;left:0;top:140px;z-index:2;">
-            <!-- <img src="./images/22_2.png" class="ani resize  rotateInDownLeft animated" style="width: 375px; left: 0px; top: 10px; z-index: 2; visibility: visible;animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-delay:2s;-webkit-animation-delay:2s;"
-              swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="2s"
-              swiper-animate-style-cache="width:320px;height:188px;left:0;top:140px;z-index:2;"> -->
+            <img src="./images/22.png" class="oneImg1 ani resize  rotateInDownLeft animated" swiper-animate-effect="rotateInDownLeft"
+              swiper-animate-duration="0.5s" swiper-animate-delay="2s" swiper-animate-style-cache="width:320px;height:188px;left:0;top:140px;z-index:2;">
 
-            <img src="./images/watch.png" class="ani resize  bounceInDown animated" style="width: 106px; height: 180px; left: 64px; top: 32px; z-index: 9; visibility: visible;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-delay:2.5s;-webkit-animation-delay:2.5s;"
-              swiper-animate-effect="bounceInDown" swiper-animate-duration="1.5s" swiper-animate-delay="2.5s"
-              swiper-animate-style-cache="width:320px;height:188px;left:0px;top:140px;z-index:1;">
+            <img src="./images/watch.png" class="ani resize  bounceInDown animated oneImg2" swiper-animate-effect="bounceInDown"
+              swiper-animate-duration="1.5s" swiper-animate-delay="2.5s" swiper-animate-style-cache="width:320px;height:188px;left:0px;top:140px;z-index:1;">
           </div>
-          <img src="./images/images/1_07.png" class="ani resize  fadeInUp animated" style="width: 130px; left: 122px; bottom: 40px; z-index: 9; visibility: visible;animation-duration:0.5s;-webkit-animation-duration:0.5s;animation-delay:4s;-webkit-animation-delay:4s;"
-            swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="4s"
-            swiper-animate-style-cache="width:320px;height:112px;left:0px;top:320px;z-index:1;">
+          <img src="./images/images/1_07.png" class="ani resize  fadeInUp animated oneImg3" swiper-animate-effect="fadeInUp"
+            swiper-animate-duration="0.5s" swiper-animate-delay="4s" swiper-animate-style-cache="width:320px;height:112px;left:0px;top:320px;z-index:1;">
         </div>
-        <img src="./images/images/2_11.png" style="width:40px; bottom:10px; left:166px;" id="array" class="resize">
+        <img src="./images/images/2_11.png" id="array" class="resize ">
 
       </section>
       <!---------------slide2-------------->
-      <section class="swiper-slide swiper-slide2 swiper-slide-next" style="height: 480px; opacity: 0.5;">
-        <img src="./images/images/p14_03.png" class="ani resize qingxie" style="width: 320px; right: 0px; bottom: 170px; z-index: 4; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-          swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
-        <img src="./images/images/p1111_06.png" class="ani resize qingxie2" style="width: 250px; right: 58px; bottom: 40px; z-index: 3; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"
-          swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
-          <img src="./images/images/2_11.png" style="width:40px; bottom:10px; left:166px;" id="array" class="resize">
-
+      <section class="swiper-slide swiper-slide2 swiper-slide-next">
+        <div class="container">
+          <img src="./images/images/p13_01.png" class="ani resize twoImg1" swiper-animate-effect="fadeIn"
+            swiper-animate-duration="0.5s" swiper-animate-delay="0s" swiper-animate-style-cache="width:320px;height:64px;right:0px;top:10px;z-index:5; ">
+          <div class="box1">
+            <img src="./images/images/p14_03.png" class="ani resize qingxie twoImg2" swiper-animate-effect="fadeIn"
+              swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+            <img src="./images/images/p1111_06.png" class="ani resize qingxie2 twoImg3" swiper-animate-effect="fadeIn"
+              swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
+            <img src="./images/images/2_11.png" id="array" class="resize">
+          </div>
+        </div>
       </section>
       <!----------------slide3-------------->
-      <section class="swiper-slide swiper-slide3" style="height: 480px; opacity: 0.5;">
-        <img src="./images/images/p23_01.png" class="ani resize" style="width: 385px; height: 122px; right: 0px; top: 30px; z-index: 5; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s"
-          swiper-animate-style-cache="width:320px;height:66px;left:0px;top:30px;z-index:5; ">
-        <img src="./images/images/p24_06.png" class="ani resize" style="width: 250px; right: 58px; bottom: 40px; z-index: 4; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"
-          swiper-animate-style-cache="width:320px;height:77px;left:0px;top:110px;z-index:3;">
-        <img src="./images/images/2_11.png" style="width:40px; bottom:10px; left:166px;" id="array" class="resize">
-
+      <section class="swiper-slide swiper-slide3">
+        <img src="./images/images/p23_01.png" class="ani resize threeImg1" swiper-animate-effect="bounce"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.2s" swiper-animate-style-cache="width:320px;height:66px;left:0px;top:30px;z-index:5; ">
+        <img src="./images/images/p21_02.png" class="ani resize threeImg2" swiper-animate-effect="fadeIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0s" swiper-animate-style-cache="width:320px;height:192px;left:0px;top:220px;z-index:4;">
+        <img src="./images/images/p24_06.png" class="bottom_box ani resize" swiper-animate-effect="zoomIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:77px;left:0px;top:110px;z-index:3;">
+        <img src="./images/images/2_11.png" id="array" class="resize">
       </section>
 
       <!-- -----------slide4-------------- -->
-      <section class="swiper-slide swiper-slide4" style="height: 480px; opacity: 0.5;">
-        <img src="./images/images/p32_01.png" class="ani resize" style="width: 385px; height: 122px; right: 0px; top: 30px; z-index: 5; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s"
-          swiper-animate-style-cache="width:320px;height:66px;left:0px;top:30px;z-index:5; ">
-        <img src="./images/images/p34_08.png" class="ani resize" style="width: 250px; right: 58px; bottom: 40px; z-index: 4; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"
-          swiper-animate-style-cache="width:320px;height:77px;left:0px;top:110px;z-index:3;">
-        <img src="./images/images/2_11.png" style="width:40px; bottom:10px; left:166px;" id="array" class="resize">
+      <section class="swiper-slide swiper-slide4">
+        <img src="./images/images/p32_01.png" class="ani resize threeImg1" swiper-animate-effect="bounce"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" swiper-animate-style-cache="width:320px;height:66px;left:0px;top:30px;z-index:5; ">
+        <img src="./images/images/p31_03.png" class="ani resize fourImg1" swiper-animate-effect="fadeIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0s" swiper-animate-style-cache="width:320px;height:192px;left:0px;top:220px;z-index:4;">
+        <img src="./images/images/p34_08.png" class="bottom_box ani resize" swiper-animate-effect="zoomIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:77px;left:0px;top:110px;z-index:3;">
+        <img src="./images/images/2_11.png" id="array" class="resize">
 
       </section>
 
       <!-- -------------slide5------------ -->
-      <section class="swiper-slide swiper-slide5 swiper-slide-next" style="height: 480px; opacity: 0.5;">
-        <img src="./images/images/p42_01.png" class="ani resize" style="width:255px; height: 212px; left: 0px; top: 4px; z-index: 5; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s"
-          swiper-animate-style-cache="width:320px;height:64px;right:0px;top:10px;z-index:5; ">
-        <img src="./images/images/p44_06.png" class="ani resize" style="width: 250px; right: 58px; bottom: 40px; z-index: 3; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"
-          swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
-        <img src="./images/images/2_11.png" style="width:40px; bottom:10px; left:166px;" id="array" class="resize">
+      <section class="swiper-slide swiper-slide5 swiper-slide-next">
+        <img src="./images/images/p42_01.png" class="ani resize fiveImg1" swiper-animate-effect="bounce"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0s" swiper-animate-style-cache="width:320px;height:64px;right:0px;top:10px;z-index:5; ">
+        <img src="./images/images/p41_01.png" class="ani resize fiveImg2" swiper-animate-effect="fadeIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+        <img src="./images/images/p44_06.png" class="bottom_box ani resize" swiper-animate-effect="zoomInDown"
+          swiper-animate-duration="0.5s" swiper-animate-delay="1s" swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
+        <img src="./images/images/2_11.png" id="array" class="resize">
 
       </section>
 
       <!-- -------------slide6------------ -->
-      <section class="swiper-slide swiper-slide6 swiper-slide-next" style="height: 480px; opacity: 0.5;">
-        <img src="./images/images/p52_04.png" class="ani resize" style="width: 375px; left: 0px; bottom: 170px; z-index: 5; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-          swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
-        <img src="./images/images/p53_05.png" class="ani resize" style="width: 130px; right: 0px; bottom: 170px; z-index: 4; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-          swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
-        <img src="./images/images/p54_08.png" class="ani resize" style="width: 250px; right: 58px; bottom: 40px; z-index: 3; visibility: hidden;"
-          swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"
-          swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
-          <img src="./images/images/2_11.png" style="width:40px; bottom:10px; left:166px;" id="array" class="resize">
+      <section class="swiper-slide swiper-slide6 swiper-slide-next">
+        <img src="./images/images/p52_04.png" class="ani resize sixImg1" swiper-animate-effect="fadeIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+        <img src="./images/images/p51_02.png" class="ani resize sixImg2" swiper-animate-effect="fadeIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+        <img src="./images/images/p53_05.png" class="ani resize sixImg3" swiper-animate-effect="fadeIn"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+        <img src="./images/images/p54_08.png" class="bottom_box ani resize" swiper-animate-effect="zoomInDown"
+          swiper-animate-duration="0.5s" swiper-animate-delay="1s" swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
+        <img src="./images/images/2_11.png" id="array" class="resize">
 
       </section>
       <!-- -------------slide7------------ -->
-      <section class="swiper-slide swiper-slide7 swiper-slide-next" style="height: 480px; opacity: 0.5;">
-        <img src="./images/images/2_02.png" class="ani resize  zoomIn animated" style="width: 180px; height: 30px; left: 0px; top: 15px; z-index: 3; visibility: visible;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-delay:0s;-webkit-animation-delay:0s;"
-          swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s"
-          swiper-animate-style-cache="width:320px;height:43px;left:0px;top:30px;z-index:3;">
+      <section class="swiper-slide swiper-slide7 swiper-slide-next">
+        <img src="./images/images/2_02.png" class="ani resize  zoomIn animated sevenImg1" swiper-animate-effect="zoomIn"
+          swiper-animate-duration="1.5s" swiper-animate-delay="0s" swiper-animate-style-cache="width:320px;height:43px;left:0px;top:30px;z-index:3;">
         <div class="quanyi1">
-          <img src="./images/images/p71_03.png" class="ani resize" style="width: 375px; height: 175.5px; left: 0px; top: 80px; z-index: 4; visibility: hidden;"
-            swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-            swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
-          <img src="./images/images/p72_05.png" class="ani resize" style="width: 375px; right: 0px; top: 300px; z-index: 4; visibility: hidden;"
-            swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-            swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+          <img src="./images/images/p71_03.png" class="ani resize sevenImg2" swiper-animate-effect="fadeIn"
+            swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+          <img src="./images/images/p72_05.png" class="ani resize sevenImg3" style="" swiper-animate-effect="fadeIn"
+            swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
           <a id="jump">
-            <img src="./images/images/p73_08.png" class="ani resize" style="width: 100px; right: 138px; bottom: 160px; z-index: 3; visibility: hidden;"
-              swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-              swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
+            <img src="./images/images/p73_08.png" class="ani resize sevenImg4" swiper-animate-effect="fadeIn"
+              swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
           </a>
-          <img src="./images/images/p74_12.png" class="ani resize" style="width: 200px; right: 87px; bottom: 60px; z-index: 3; visibility: hidden;"
-            swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-            swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;">
+          <img src="./images/images/p74_12.png" class="ani resize sevenImg5" swiper-animate-effect="fadeIn"
+            swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;">
         </div>
         <div class="quanyi2">
-          <img src="./images/images/p75_02.png" class="ani resize" style="width: 375px; right: 0px; top: 80px; z-index: 4;">
-          <img src="./images/images/p81_03.png" class="ani resize" style="width: 375px; right: 0px; top: 82px; z-index: 4;">
-          <img src="./images/images/p74_12.png" class="ani resize" style="width: 200px; right: 87px; bottom: 60px; z-index: 3;">
-          <a id="close"></a>
           <div class="context">
-            <p>申请民生尚品联名信用卡产品而首次成为民生信用卡主卡持卡人的新客户，在核卡30日内激活并任意消费一笔,即可获赠1000元尚品网消费优惠券礼包；</p></br>
-            <p>民生尚品联名信用卡持卡人核卡首年免费获得尚品网金牌PLUS会员（市场售价299元）；</p></br>
-            <p>民生尚品联名信用卡持卡人在尚品网线上消费可享2%比例的尚品积分返现，每月消费超出2000元以上的金额，针对超出部分享受5%的额外积分返现，每月上限500元（500元=500积分）；</p></br>
-            <p>持卡人使用民生尚品联名信用卡并通过万事达网络以外币记账的所有消费，可享受消费金额的1%尚品积分返现，每位客户每月最多返还30美金，每年最多返现360美金。</p>
+            <div class="text_box">
+              <div>
+                <h1 style="font-size: 0.3rem; color: #fff;text-align: center; padding-top: 0.2rem;">民生尚品网联名卡</h1>
+                <p>申请民生尚品联名信用卡产品而首次成为民生信用卡主卡持卡人的新客户，在核卡30日内激活并任意消费一笔,即可获赠1000元尚品网消费优惠券礼包；</p>
+
+                <p>民生尚品联名信用卡持卡人核卡首年免费获得尚品网金牌PLUS会员（市场售价299元）；</p>
+
+                <p>民生尚品联名信用卡持卡人在尚品网线上消费可享2%比例的尚品积分返现，每月消费超出2000元以上的金额，针对超出部分享受5%的额外积分返现，每月上限500元（500元=500积分）；</p>
+
+                <p>持卡人使用民生尚品联名信用卡并通过万事达网络以外币记账的所有消费，可享受消费金额的1%尚品积分返现，每位客户每月最多返还30美金，每年最多返现360美金。</p>
+              </div>
+            </div>
+            <a id="close">
+              <img src="./images/images/cha.png" alt="">
+            </a>
+
           </div>
+          <!-- <img src="./images/images/p74_12.png" class="ani resize sevenImg5"> -->
         </div>
-        <img src="./images/images/2_11.png" style="width:40px; bottom:10px; left:166px;" id="array" class="resize">
+        <img src="./images/images/2_11.png" id="array" class="resize">
 
       </section>
       <!-- -------------slide8------------ -->
-      <section class="swiper-slide swiper-slide8 swiper-slide-next" style="height: 480px; opacity: 0.5;">
-        <img src="./images/images/2_02.png" class="ani resize  zoomIn animated" style="width: 180px; height: 30px; left: 0px; top: 15px; z-index: 3; visibility: visible;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-delay:0s;-webkit-animation-delay:0s;"
-          swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s"
-          swiper-animate-style-cache="width:320px;height:43px;left:0px;top:30px;z-index:3;">
-          <img src="./images/images/p81_03.png" class="ani resize" style="width: 375px; height: 51px; left: 0px; top: 60px; z-index: 4; visibility: hidden;"
-            swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-            swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
-          <img src="./images/images/p71_03.png" class="ani resize" style="width: 375px; height: 175.5px; left: 0px; top: 100px; z-index: 4; visibility: hidden;"
-            swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-            swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
-          <img src="./images/images/p81_05.png" class="ani resize" style="width: 375px; right: 0px; top: 300px; z-index: 4; visibility: hidden;"
-            swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-            swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
-            <img src="./images/images/p82_07.png" class="ani resize" style="width: 375px; left: 0; bottom: 118px; z-index: 3; visibility: hidden;"
-              swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-              swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
-          <img src="./images/images/p74_12.png" class="ani resize" style="width: 200px; right: 87px; bottom: 60px; z-index: 3; visibility: hidden;"
-            swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"
-            swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;">
+      <section class="swiper-slide swiper-slide8 swiper-slide-next">
+        <img src="./images/images/2_02.png" class="ani resize  zoomIn animated sevenImg1" swiper-animate-effect="zoomIn"
+          swiper-animate-duration="1.5s" swiper-animate-delay="0s" swiper-animate-style-cache="width:320px;height:43px;left:0px;top:30px;z-index:3;">
+        <img src="./images/images/p81_03.png" class="ani resize enetImg1" swiper-animate-effect="bounce"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+        <img src="./images/images/p71_03.png" class="ani resize enetImg2" swiper-animate-effect="bounceInLeft"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+        <img src="./images/images/p81_05.png" class="ani resize sevenImg3" swiper-animate-effect="bounceInRight"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.8s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;z-index:4;">
+        <img src="./images/images/p82_07.png" class="ani resize enetImg3" swiper-animate-effect="bounceInLeft"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;left:0px;top:100px; bottom:40px;z-index:3;">
+        <img src="./images/images/p74_12.png" class="ani resize sevenImg5" swiper-animate-effect="fadeInDown"
+          swiper-animate-duration="0.5s" swiper-animate-delay="0.5s" swiper-animate-style-cache="width:320px;height:42px;left:0px;top:100px;">
       </section>
+
+
     </div>
+
+    <!-- <img src="./images/images/2_11.png" style="width:40px;height:15px; bottom:10px; left:166px;" id="array" class="resize"> -->
+
   </div>
 
 
@@ -546,6 +276,34 @@
 
     function change() {
       var box = document.querySelector(".box")
+      // box.style.cssText="transform: rotateY("+event.gamma+"deg)"
+      box.style.cssText = "transform: scale3d(1.3,1.3,1.3) rotateY(30deg)"
+    }
+  </script>
+  <script>
+    //首先是为浏览器绑定deviceorientation事件和处理程序。
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', DeviceOrientationHandler, false);
+    } else {
+      alert("您的浏览器不支持DeviceOrientation");
+    }
+
+    function DeviceOrientationHandler(event) {
+      console.log(event)
+      //alpha:设备指示的方向，根据指南针的设定情况而定
+      //beta:设备绕x轴旋转的角度
+      //gamma:设备绕y轴旋转的角度
+      var box = document.querySelector(".box1")
+      if (Math.abs(event.gamma) > 8) {
+        Math.abs(event.gamma) = 8
+      }
+      box.style.cssText = "transform: rotateY(" + event.gamma + "deg)"
+      // box.style.cssText="transform: scale3d(1." + Math.abs(event.gamma) + ",1."+ Math.abs(event.gamma) + ",1."+
+      Math.abs(event.gamma) + ") rotateY(" + event.gamma + "deg)"
+    }
+
+    function change() {
+      var box = document.querySelector(".box1")
       // box.style.cssText="transform: rotateY("+event.gamma+"deg)"
       box.style.cssText = "transform: scale3d(1.3,1.3,1.3) rotateY(30deg)"
     }
